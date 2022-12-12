@@ -1,5 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 import { Label } from './Filter.styled';
 
@@ -20,3 +21,8 @@ export function Filter({ filterValue, inputChange }) {
     </>
   );
 }
+
+Filter.propTypes = {
+  filterValue: PropTypes.string.isRequired,
+  inputChange: PropTypes.func.isRequired,
+};
